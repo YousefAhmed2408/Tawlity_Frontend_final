@@ -330,6 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const userLat = position.coords.latitude;
             const userLon = position.coords.longitude;
             getNearbyRestaurants(userLat, userLon);
+             window.open(`https://www.google.com/maps?q=${userLat},${userLon}`, '_blank');
         }, error => {
             console.error("Geolocation error:", error);
             document.querySelector(".loading-text").textContent = "Failed to fetch location.";
